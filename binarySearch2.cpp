@@ -1,36 +1,23 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int arr[50];
-    int size;
-    cout<<"Enter the size of an array: ";
-    cin>>size;
+    int arr[8] = {5, 8, 12, 15, 18, 22, 30, 35};
+    int target = 18;
 
-    for(int i = 0; i<size; i++){
-        cout<<"Enter Element "<<i + 1<<" :";
-        cin>>arr[i];
-    }
-
-    int target;
-    cout<<"Enter the number you want to search: ";
-    cin>>target;
-
-    int start = 0; 
-    int end = size -1;
-
-    while (start<= end)
+    int st = 0;
+    int end = 7;
+    while (st <= end)
     {
-        int mid = (start+end)/2;
-        if(arr[mid] < target){
-            start = mid +1;
-        }else if(arr[mid]> target){
-            end = mid -1;
+        int mid = (st + end) / 2;
+        if(target < arr[mid]){
+            end = mid - 1;
+        }else if(target > arr[mid]){
+            st = mid + 1;
         }else{
-            cout<<"Element found at index: "<<mid;
+            cout<<"Number fount at index: "<<mid<<endl;
             return 0;
         }
+        //cout<<"Number is not found: "<<endl;
     }
-    cout<<"Element doesn't found in given array"<<endl;
-    return 0;
     
-}
+    }

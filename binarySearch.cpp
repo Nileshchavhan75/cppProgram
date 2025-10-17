@@ -1,27 +1,25 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int arr[] = {4,5,6,7,0,1,2};
-    int size = sizeof(arr)/sizeof(arr[0]);
+    int array[7] ={10,15,22,33,45,46,51};
+    int target = 45;
 
-    int start = 0;
-    int end = size-1;
-    int key = 3;
-    while (start<=end)
+    int st = 0; 
+    int end = 6;
+
+
+    while (st <= end)
     {
-        int mid = (start+end)/2;
-        if(arr[start]<arr[mid]){
-            start = mid +1;
-        }else if (arr[mid]> arr[end])
-        {
+        int mid =(st + end) /2;
+
+        if(target > array[mid]){
+            st = mid + 1;
+        }else if(target < array[mid]){
             end = mid - 1;
-        }else{
-            cout<<"Element found at index: "<<mid<<endl;
+        }else {
+            cout<<"element found: "<<mid<<endl;
             return 0;
         }
-        
     }
-
-    cout<<"Element not found"<<endl;
-    
+    cout<<"Element not found in the array. "<<endl;
 }
