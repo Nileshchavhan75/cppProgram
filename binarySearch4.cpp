@@ -28,9 +28,8 @@ int main(){
             start = mid +1;
         }else{
             end = mid -1;
-        }
+        }    
     }
-    
     start = 0, end = size -1;
 
     while (start<=end)
