@@ -1,32 +1,25 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class BankAccount{
-  string name;
-  int account_number;
-  string Type_of_Account;
-  float balance;
 
-public:
-BankAccount(string name, int account_number, string Type_of_account, float balance){
-    this->name = name;
-    this->account_number = account_number;
-    this->Type_of_Account = Type_of_Account;
-    this->balance = balance;
+int main() {
+    int n;
+    cout << "Enter the size of the array: ";
+    cin >> n;
 
-}
- void Display(){
-    cout<<"Name of the Account holder: "<<name<<endl;
-    cout<<"Account number: "<<account_number<<endl;
-    cout<<"Type: "<<Type_of_Account<<endl;
-    cout<<"blance: "<<balance<<endl;
+    int array[n]; // Declare an array of size n
 
-}
-    
-};
-int main(){
-    BankAccount Ba("Shivay", 75075,"Saving", 75074.5);
-    Ba.Display();
+    // Taking input for the array
+    cout << "Enter " << n << " elements:" << endl;
+    for (int i = 0; i < n; i++) {
+        cin >> array[i]; // Read each element
+    }
+
+    // Displaying the array elements
+    cout << "The elements of the array are:" << endl;
+    for (int i = 0; i < n; i++) {
+        cout << array[i] << " "; // Print each element
+    }
+    cout << endl;
+
     return 0;
-
 }
-
