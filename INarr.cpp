@@ -14,6 +14,5 @@ int main(){
     {
         cout<<marks[i]<<endl;
     }
-
     return 0;
 }
