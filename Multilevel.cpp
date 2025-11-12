@@ -1,45 +1,43 @@
 #include<iostream>
 using namespace std;
 class Human{
-    protected:
-        string name;
-        string gender;
- public:
-        Human(){
-        cout<<"this will execute frist; "<<endl;
- }
+   protected:
+   string name;
+   int age;
+   public: 
+   Human(){
+    cout<<"Ram Ram"<<endl;
+   }
+};
+class Employee : public Human {
+   protected:
+   int salary;
+
+   public:
+   Employee(){
+    cout<<"jay Hanuman"<<endl;
+   }
 
 };
-class Student : public Human{
-    protected:
-        int roll_num;
-        int id;
-    public:
-           Student(){
-            cout<<"This will execute second: "<<endl;
-           }
+class manager : public Employee{
 
-};
-class Teacher : public Student{
-string subject;
-public: 
-     Teacher(string name, string gender, int roll_num, int id,string subject){
-       this->name = name;
-       this->gender = gender;
-       this->roll_num = roll_num;
-       this->id = id;
-       this->subject = subject;
-     }
-     void display(){
-        cout<<"Name: "<<name<<endl;
-        cout<<"gender: "<<gender<<endl;
-       // cout<<"roll_num: "<<roll_num<<endl;
-        cout<<"id: "<<id<<endl;
-        cout<<"subject: "<<subject;
-     }
+    string deparatment;
+
+    public: 
+    manager(string name, int age,int salary, string deparatment){
+    this->name = name;
+    this->age = age;
+    this->salary = salary;
+    this->deparatment = deparatment;
+    }
+    void display(){
+        cout<<name<<" "<<age<<" "<<salary<<" "<<deparatment<<" "<<endl;
+    }
 };
 int main(){
-    Teacher t1("Nilesh","Male",12,07,"DSA with C++");
-    t1.display();
+    manager m1("Nilesh", 22, 2345,"finace");
+    m1.display();
+
     return 0;
+
 }
