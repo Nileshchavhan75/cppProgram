@@ -1,3 +1,5 @@
-Welcome to file hanling 
-new dat inserted 
-with right person
+wELCOME TO c++ ***
+WELCOME TO FILE HANDLING ***
+VIRTUAL FUNCTION ***
+NEW DATA INSERTED ***
+FILE ENDED
