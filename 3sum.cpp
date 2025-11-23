@@ -26,5 +26,4 @@ int main(){
     int target = 20; 
     cout<<threeSum(arr,target,n);
     return 0;
-
 }

@@ -1,24 +1,18 @@
 #include<iostream>
 using namespace std;
-int main(){
-    int n;
-    cout<<"Enter Size: ";
-    cin>>n;
 
-    int arr[50];
-    cout<<"Enter "<<n<<" of Array: ";
-    for(int i = 0; i<n; i++){
-        cin>>arr[i];
-    }
+int main() {
+    int n = 4;  // Number of rows
 
-    int start = 0, end = n-1;
-    while(start<=end){
-        swap(arr[start],arr[end]);
-        start++;
-        end--;
+    for (int i = 0; i < n; i++) {
+        char ch = 'A' + i;  // Start character for the current row
+        
+        for (int j = 0; j <= i; j++) {
+            cout << char(ch - j) << " ";  // Convert ASCII value back to character
+        }
+        
+        cout << endl;  // Move to the next line after each row
     }
-    for(int i = 0; i<n; i++){
-        cout<<arr[i]<<" ";
-    }
-        return 0;
+    
+    return 0;
 }
