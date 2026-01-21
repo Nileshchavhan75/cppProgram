@@ -1,4 +1,6 @@
-class Solution {
+#include<iostream>
+#include<vector>
+using namespace std;class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         vector<bool>count(256,0);
@@ -15,3 +17,4 @@ public:
         return len;
     }
 };
+}
